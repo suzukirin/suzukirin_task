@@ -39,7 +39,7 @@
     @csrf
     <p>
         タイトル<br>
-        <input type="string" name="title" value="{{ old('title') }}">
+        <input type="text" name="title" value="{{ old('title') }}">
     </p>
     <p>
         内容<br>
