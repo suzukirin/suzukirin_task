@@ -26,8 +26,8 @@
         本文<br>
         <textarea type="text" name="body" value="{{ $task->body }}"></textarea>
     </p>
-<input type="submit" value="更新">
+    <input type="submit" value="更新">
 </form>
 <div style="display:inline-flex">
-<a href="/tasks/{{ $task->id }}"><button>詳細に戻る</button></a>
+    <a href="/tasks/{{ $task->id }}"><button>詳細に戻る</button></a>
 </div>
