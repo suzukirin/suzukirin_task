@@ -24,7 +24,7 @@
     </p>
     <p>
         本文<br>
-        <textarea>{{ old('body') }}</textarea>
+        <textarea name="body">{{ old('body') }}</textarea>
     </p>
     <input type="submit" value="更新">
 </form>

@@ -2,18 +2,20 @@
 <h1>タスク一覧</h1>
 
     @foreach ($tasks as $task)
-        <!-- // リンク先をidで取得し名前で出力 -->
-            @csrf
+        <!-- // リンク先をidで取得し名前で出力 -->    
+        @csrf
+        <div style="display:block-flex">
         <div style="display:inline-flex">
         <li style="list-style: none;">
         </li>
+        
     <a href="/tasks/{{ $task->id }}">{{ $task->title}}</a>
         <form action="/tasks/{{ $task->id }}" method="post">
             @csrf
             @method('DELETE')
             <input type="submit" value="削除する" onclick="if(!confirm('削除しますか？')){return false};">
         </div>
-    </form>
+        </form>
     @endforeach
 <hr>
 
@@ -41,7 +43,7 @@
     </p>
     <p>
         内容<br>
-        <textarea>{{ old('body') }}</textarea>
+        <textarea name="body">{{ old('body') }}</textarea>
     </p>
         <input type="submit" value="Create Task">
 </form>
