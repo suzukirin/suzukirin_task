@@ -3,12 +3,10 @@
 
     @foreach ($tasks as $task)
         <!-- // リンク先をidで取得し名前で出力 -->
-        <form action="/tasks" method="post">
             @csrf
         <div style="display:inline-flex">
         <li style="list-style: none;">
         </li>
-    </form>
     <a href="/tasks/{{ $task->id }}">{{ $task->title}}</a>
         <form action="/tasks/{{ $task->id }}" method="post">
             @csrf
@@ -43,7 +41,7 @@
     </p>
     <p>
         内容<br>
-        <textarea type="text" name="body" value="{{ old('body') }}"></textarea>
+        <textarea>{{ old('body') }}</textarea>
     </p>
         <input type="submit" value="Create Task">
 </form>
