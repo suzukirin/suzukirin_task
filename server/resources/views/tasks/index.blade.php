@@ -7,9 +7,9 @@
             @csrf
         <div style="display:inline-flex">
         <li style="list-style: none;">
-        <a href="/tasks/{{ $task->id }}">{{ $task->title}}</a>
         </li>
-        </form>
+    </form>
+    <a href="/tasks/{{ $task->id }}">{{ $task->title}}</a>
         <form action="/tasks/{{ $task->id }}" method="post">
             @csrf
             @method('DELETE')
@@ -45,8 +45,6 @@
         内容<br>
         <textarea type="text" name="body" value="{{ old('body') }}"></textarea>
     </p>
-    
-
         <input type="submit" value="Create Task">
 </form>
 
